@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sophisticated Portfolio Tracker & Risk Dashboard</title>
-    <!-- Tailwind CSS for UI Layout -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Chart.js for Portfolio Allocation Pie Chart & TAIEX Simulation -->
-    <script src="https://jsdelivr.net"></script>
+    <title>AlphaEngine Portfolio Tracker</title>
+    <!-- 更換為更穩定的 cdnjs / unpkg 備用節點 -->
+    <link rel="stylesheet" href="https://unpkg.com">
+    <script src="https://cloudflare.com"></script>
     <style>
         @import url('https://googleapis.com');
         body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f3f4f6; }
@@ -85,7 +84,7 @@
                     </select>
                 </div>
                 <div class="relative h-44 flex justify-center">
-                    <canvas id="allocationPieChart"></canvas>
+                    <canvas id="allocationPieChart" style="max-height: 176px;"></canvas>
                 </div>
             </div>
 
@@ -94,7 +93,7 @@
                 <h3 class="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-2">TAIEX Benchmark Performance Simulation</h3>
                 <p class="text-xs text-gray-500 mb-4">Simulated 3-Year growth model tracking vs. TAIEX Index.</p>
                 <div class="h-36 relative">
-                    <canvas id="benchmarkSimulationChart"></canvas>
+                    <canvas id="benchmarkSimulationChart" style="max-height: 144px;"></canvas>
                 </div>
             </div>
 
