@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlphaEngine Portfolio Tracker</title>
-    <!-- 更換為更穩定的 cdnjs / unpkg 備用節點 -->
+    <!-- 使用完全獨立且無版本衝突的萬用 Tailwind CSS 樣式庫 -->
     <link rel="stylesheet" href="https://unpkg.com">
     <script src="https://cloudflare.com"></script>
     <style>
@@ -21,7 +21,7 @@
         <header class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 glass-card rounded-2xl gap-4">
             <div>
                 <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-                    📈 AlphaEngine <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">v2.1 (TW Market Opt)</span>
+                    📈 AlphaEngine <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-500 bg-opacity-10 text-blue-400 border border-blue-500 border-opacity-20">v2.1 (TW Market Opt)</span>
                 </h1>
                 <p class="text-sm text-gray-400 mt-1">Institutional Multi-Account Analytics & Risk Terminal</p>
             </div>
@@ -38,7 +38,7 @@
         </header>
 
         <!-- RISK NOTIFICATION & GUARDRAL BAR -->
-        <div id="riskAlertBar" class="hidden p-4 rounded-xl border flex justify-between items-center bg-red-500/10 border-red-500/30 text-red-400">
+        <div id="riskAlertBar" class="hidden p-4 rounded-xl border flex justify-between items-center bg-red-500 bg-opacity-10 border-red-500 border-opacity-30 text-red-400">
             <div class="flex items-center gap-3">
                 <span class="text-xl">⚠️</span>
                 <div>
@@ -115,7 +115,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="border-b border-gray-800 bg-gray-900/40 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        <tr class="border-b border-gray-800 bg-gray-900 bg-opacity-40 text-xs font-semibold uppercase tracking-wider text-gray-400">
                             <th class="p-4">Ticker / Asset</th>
                             <th class="p-4">Structural Tags</th>
                             <th class="p-4 text-right">Shares Held</th>
@@ -127,7 +127,7 @@
                             <th class="p-4 text-center">Action</th>
                         </tr>
                     </thead>
-                    <tbody id="portfolioTableBody" class="divide-y divide-gray-800/60 text-sm">
+                    <tbody id="portfolioTableBody" class="divide-y divide-gray-800 divide-opacity-60 text-sm">
                         <!-- Dynamic content injected here -->
                     </tbody>
                 </table>
@@ -138,19 +138,19 @@
         <section class="glass-card rounded-2xl p-6">
             <h3 class="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-4">Quarterly Dividend Tracking Calendar (Est. Cashflows)</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div class="p-4 bg-gray-900/40 border border-gray-800 rounded-xl">
+                <div class="p-4 bg-gray-900 bg-opacity-40 border border-gray-800 rounded-xl">
                     <span class="text-xs text-gray-500 font-medium block">Q1 Payout Window</span>
                     <span id="divQ1" class="text-lg font-bold text-white mt-1 block">NT$ 0</span>
                 </div>
-                <div class="p-4 bg-gray-900/40 border border-gray-800 rounded-xl">
+                <div class="p-4 bg-gray-900 bg-opacity-40 border border-gray-800 rounded-xl">
                     <span class="text-xs text-gray-500 font-medium block">Q2 Payout Window</span>
                     <span id="divQ2" class="text-lg font-bold text-white mt-1 block">NT$ 0</span>
                 </div>
-                <div class="p-4 bg-gray-900/40 border border-gray-800 rounded-xl">
+                <div class="p-4 bg-gray-900 bg-opacity-40 border border-gray-800 rounded-xl">
                     <span class="text-xs text-gray-500 font-medium block">Q3 Payout Window</span>
                     <span id="divQ3" class="text-lg font-bold text-white mt-1 block">NT$ 0</span>
                 </div>
-                <div class="p-4 bg-gray-900/40 border border-gray-800 rounded-xl">
+                <div class="p-4 bg-gray-900 bg-opacity-40 border border-gray-800 rounded-xl">
                     <span class="text-xs text-gray-500 font-medium block">Q4 Payout Window</span>
                     <span id="divQ4" class="text-lg font-bold text-blue-400 mt-1 block">NT$ 0</span>
                 </div>
@@ -159,4 +159,4 @@
 
         <!-- BACKUP UTILITY CORE UTILITIES -->
         <footer class="flex justify-end gap-4 p-2">
-            <button onclick="exportJSONData()" class="text-xs text-gray-400 hover:text-white transition-all bg-gray-800/40 px-3 py-1.5 rounded-lg border border-gray-700/50">Export System Configuration (JSON)</button>
+            <button onclick="exportJSONData()" class="text-xs text-gray-400 hover:text-white transition-all bg-gray-800 bg-opacity-40 px-3 py-1.5 rounded-lg border border-gray-700 border-opacity-50">Export System Configuration (JSON)</button>
